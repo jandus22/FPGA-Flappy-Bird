@@ -60,7 +60,7 @@ initial begin
 
     // Dajemy ptakowi chwilę na opadnięcie po starcie symulacji
     forever begin
-      #300000;
+      #300000 EncA_QA = 1;
       #100000 EncA_QA = 0; EncA_QB = 0; // <-- W tym momencie następuje JUMP!
       #20000 EncA_QA = 1;
       #100000 EncA_QA = 0;
@@ -107,8 +107,53 @@ initial begin
       #10000 EncA_QA = 1;
       #60000 EncA_QA = 0;
       #10000 EncA_QA = 1;
+      #200000 EncA_QA = 0;
+      #100 EncA_QA = 1;
       #400000 EncA_QA = 0;
       #100 EncA_QA = 1;
+      #1000 EncA_QA = 0;
+      #100 EncA_QA = 1; 
+      #200000 EncA_QA = 0;
+      #100 EncA_QA = 1; 
+      #300000 EncA_QA = 0; 
+      #100 EncA_QA = 1;
+      #300000 EncA_QA = 0;
+      #100 EncA_QA = 1;
+      #1000 EncA_QA = 0;
+      #100 EncA_QA = 1;
+      #1000 EncA_QA = 0;
+      #100 EncA_QA = 1; 
+      #300000 EncA_QA = 0; 
+      #100 EncA_QA = 1; 
+      #500000 EncA_QA = 0; 
+      #100 EncA_QA = 1; 
+      #40000 EncA_QA = 0; 
+      #100 EncA_QA = 1; 
+      #200000 EncA_QA = 0; 
+      #100 EncA_QA = 1; 
+      #10000 EncA_QA = 0; 
+      #100 EncA_QA = 1; 
+      #300000 EncA_QA = 0; 
+      #100 EncA_QA = 1; 
+      #200000 EncA_QA = 0; 
+      #100 EncA_QA = 1; 
+      #200000 EncA_QA = 0; 
+      #100 EncA_QA = 1; 
+      #20000 EncA_QA = 0; 
+      #100 EncA_QA = 1; 
+      #20000 EncA_QA = 0;
+      #100 EncA_QA = 1; 
+      #200000 EncA_QA = 0; 
+      #100 EncA_QA = 1; 
+      #500000 EncA_QA = 0; 
+      #100 EncA_QA = 1; 
+      #20000 EncA_QA = 0;
+      #100 EncA_QA = 1; 
+      #400000 EncA_QA = 0;
+      #100 EncA_QA = 1;
+      #300000 EncA_QA = 0; 
+      #100 EncA_QA = 1;
+      #1000000 EncA_QA = 0;
     end
     //#400000 EncA_QA = 0;      
     //forever begin
