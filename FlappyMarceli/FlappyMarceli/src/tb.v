@@ -57,6 +57,9 @@ module tb();
 initial begin
     // Stan początkowy - enkoder w spoczynku (zazwyczaj obie fazy są w jedynce)
     EncA_QA = 1; EncA_QB = 1; EncB_QA = 1; EncB_QB = 1;
+    repeat (2000) begin
+      #10000;
+    end
     #1000000 EncB_QB = 0;
     // Dajemy ptakowi chwilę na opadnięcie po starcie symulacji
     forever begin
