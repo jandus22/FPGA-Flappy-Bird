@@ -1,0 +1,1 @@
+-o C:/My_Designs/FPGA-Flappy-Bird/FlappyMarceli/FlappyMarceli/compile -lc C:/My_Designs/FPGA-Flappy-Bird/FlappyMarceli/library.cfg -fl C:/My_Designs/FPGA-Flappy-Bird/FlappyMarceli/FlappyMarceli/projlib.cfg -pli "C:/Aldec/Active-HDL-Student-Edition/bin/systf.dll" -O2 -sve -msg 5 -sv2k17 -work FlappyMarceli C:/My_Designs/FPGA-Flappy-Bird/FlappyMarceli/FlappyMarceli/src/pong_main.v 

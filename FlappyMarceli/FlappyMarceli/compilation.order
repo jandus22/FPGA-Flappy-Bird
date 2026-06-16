@@ -1,0 +1,14 @@
+.\src\ddr.v
+.\src\delay.v
+.\src\dev_i2c_phy.v
+.\src\dev_i2c_phy_bit.v
+.\src\dev_i2c_phy_scaler.v
+.\src\hdmi_i2c_cfg.v
+.\src\pll_75mhz.v
+.\src\pong_main.v
+.\src\pong_top.v
+.\src\tb.v
+.\src\uart_rx.v
+.\src\uart_tx.v
+.\src\vga_sync_gen.v
+.\src\vo_phy_ddr.v
