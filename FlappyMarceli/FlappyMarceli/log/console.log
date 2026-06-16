@@ -2380,3 +2380,582 @@ run
 endsim
 # KERNEL: stopped at time: 39053724600 ps
 # VSIM: Simulation has finished.
+alog -O2 -sve -msg 5 -sv2k17 -work FlappyMarceli $dsn/src/ddr.v $dsn/src/delay.v $dsn/src/dev_i2c_phy.v $dsn/src/dev_i2c_phy_bit.v $dsn/src/dev_i2c_phy_scaler.v $dsn/src/hdmi_i2c_cfg.v $dsn/src/pll_75mhz.v $dsn/src/pong_main.v $dsn/src/pong_top.v $dsn/src/tb.v $dsn/src/uart_rx.v $dsn/src/uart_tx.v $dsn/src/vga_sync_gen.v $dsn/src/vo_phy_ddr.v
+# Warning: VCP2515 ddr.v : (25, 49): Undefined module: OB was used. Port connection rules will not be checked at such instantiations.
+# Warning: VCP2515 ddr.v : (28, 25): Undefined module: ODDRXE was used. Port connection rules will not be checked at such instantiations.
+# Warning: VCP2515 ddr.v : (30, 40): Undefined module: VLO was used. Port connection rules will not be checked at such instantiations.
+# Warning: VCP2515 ddr.v : (32, 40): Undefined module: VHI was used. Port connection rules will not be checked at such instantiations.
+# Warning: VCP2515 pll_75mhz.v : (87, 47): Undefined module: EHXPLLJ was used. Port connection rules will not be checked at such instantiations.
+# Unit top modules: pong_top tb uart_rx uart_tx.
+# Compile success 0 Errors 5 Warnings  Analysis time: 0[s].
+# done
+asim -O5 +access +r +m+tb tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.2 [s]
+# SLP: Finished : 0.3 [s]
+# SLP: 0 primitives and 41 (100.00%) other processes in SLP
+# SLP: 87 (98.86%) signals in SLP and 1 (1.14%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4759 kB (elbread=427 elab2=4196 kernel=135 sdf=0)
+# KERNEL: ASDB file was created in location C:\My_Designs\FPGA-Flappy-Bird\FlappyMarceli\FlappyMarceli\src\wave.asdb
+#  04:54, wtorek, 16 czerwca 2026
+#  Simulation has been initialized
+run
+endsim
+# KERNEL: stopped at time: 1420359600 ps
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+alog -O2 -sve -msg 5 -sv2k17 -work FlappyMarceli $dsn/src/tb.v
+# Unit top modules: tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.2 [s]
+# SLP: Finished : 0.3 [s]
+# SLP: 0 primitives and 41 (100.00%) other processes in SLP
+# SLP: 87 (98.86%) signals in SLP and 1 (1.14%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4760 kB (elbread=427 elab2=4198 kernel=135 sdf=0)
+# KERNEL: ASDB file was created in location C:\My_Designs\FPGA-Flappy-Bird\FlappyMarceli\FlappyMarceli\src\wave.asdb
+#  04:55, wtorek, 16 czerwca 2026
+#  Simulation has been initialized
+run
+endsim
+# KERNEL: stopped at time: 7585980600 ps
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Finished. Using existing simulator library
+# SLP: 0 primitives and 41 (100.00%) other processes in SLP
+# SLP: 87 (98.86%) signals in SLP and 1 (1.14%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4760 kB (elbread=427 elab2=4198 kernel=135 sdf=0)
+# KERNEL: ASDB file was created in location C:\My_Designs\FPGA-Flappy-Bird\FlappyMarceli\FlappyMarceli\src\wave.asdb
+#  04:55, wtorek, 16 czerwca 2026
+#  Simulation has been initialized
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+alog -O2 -sve -msg 5 -sv2k17 -work FlappyMarceli $dsn/src/pong_main.v
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 The "pong_main" design unit does not have a time unit/precision defined but other design units do.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 100ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.2 [s]
+# SLP: Finished : 0.3 [s]
+# SLP: 0 primitives and 41 (100.00%) other processes in SLP
+# SLP: 86 (98.85%) signals in SLP and 1 (1.15%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4761 kB (elbread=427 elab2=4199 kernel=135 sdf=0)
+# KERNEL: ASDB file was created in location C:\My_Designs\FPGA-Flappy-Bird\FlappyMarceli\FlappyMarceli\src\wave.asdb
+#  04:56, wtorek, 16 czerwca 2026
+#  Simulation has been initialized
+run
+endsim
+# KERNEL: stopped at time: 28882332600 ps
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 The "pong_main" design unit does not have a time unit/precision defined but other design units do.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+alog -O2 -sve -msg 5 -sv2k17 -work FlappyMarceli $dsn/src/tb.v
+# Unit top modules: tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 The "pong_main" design unit does not have a time unit/precision defined but other design units do.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 100ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.2 [s]
+# SLP: Finished : 0.3 [s]
+# SLP: 0 primitives and 41 (100.00%) other processes in SLP
+# SLP: 86 (98.85%) signals in SLP and 1 (1.15%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4761 kB (elbread=427 elab2=4198 kernel=135 sdf=0)
+# KERNEL: ASDB file was created in location C:\My_Designs\FPGA-Flappy-Bird\FlappyMarceli\FlappyMarceli\src\wave.asdb
+#  04:58, wtorek, 16 czerwca 2026
+#  Simulation has been initialized
+run
+endsim
+# KERNEL: stopped at time: 10792828200 ps
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 The "pong_main" design unit does not have a time unit/precision defined but other design units do.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 100ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Finished. Using existing simulator library
+# SLP: 0 primitives and 41 (100.00%) other processes in SLP
+# SLP: 86 (98.85%) signals in SLP and 1 (1.15%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4761 kB (elbread=427 elab2=4198 kernel=135 sdf=0)
+# KERNEL: ASDB file was created in location C:\My_Designs\FPGA-Flappy-Bird\FlappyMarceli\FlappyMarceli\src\wave.asdb
+#  04:59, wtorek, 16 czerwca 2026
+#  Simulation has been initialized
+run
+endsim
+# KERNEL: stopped at time: 14945627400 ps
+# VSIM: Simulation has finished.
+alog -O2 -sve -msg 5 -sv2k17 -work FlappyMarceli $dsn/src/ddr.v $dsn/src/delay.v $dsn/src/dev_i2c_phy.v $dsn/src/dev_i2c_phy_bit.v $dsn/src/dev_i2c_phy_scaler.v $dsn/src/hdmi_i2c_cfg.v $dsn/src/pll_75mhz.v $dsn/src/pong_main.v $dsn/src/pong_top.v $dsn/src/tb.v $dsn/src/uart_rx.v $dsn/src/uart_tx.v $dsn/src/vga_sync_gen.v $dsn/src/vo_phy_ddr.v
+# Warning: VCP2515 ddr.v : (25, 49): Undefined module: OB was used. Port connection rules will not be checked at such instantiations.
+# Warning: VCP2515 ddr.v : (28, 25): Undefined module: ODDRXE was used. Port connection rules will not be checked at such instantiations.
+# Warning: VCP2515 ddr.v : (30, 40): Undefined module: VLO was used. Port connection rules will not be checked at such instantiations.
+# Warning: VCP2515 ddr.v : (32, 40): Undefined module: VHI was used. Port connection rules will not be checked at such instantiations.
+# Warning: VCP2515 pll_75mhz.v : (87, 47): Undefined module: EHXPLLJ was used. Port connection rules will not be checked at such instantiations.
+# Unit top modules: pong_top tb uart_rx uart_tx.
+# Compile success 0 Errors 5 Warnings  Analysis time: 0[s].
+# done
+asim -O5 +access +r +m+tb tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.3 [s]
+# SLP: Finished : 0.3 [s]
+# SLP: 0 primitives and 42 (100.00%) other processes in SLP
+# SLP: 89 (98.89%) signals in SLP and 1 (1.11%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4761 kB (elbread=427 elab2=4198 kernel=135 sdf=0)
+# KERNEL: ASDB file was created in location C:\My_Designs\FPGA-Flappy-Bird\FlappyMarceli\FlappyMarceli\src\wave.asdb
+#  05:05, wtorek, 16 czerwca 2026
+#  Simulation has been initialized
+run
+endsim
+# KERNEL: stopped at time: 11244710400 ps
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+alog -O2 -sve -msg 5 -sv2k17 -work FlappyMarceli $dsn/src/tb.v
+# Unit top modules: tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.2 [s]
+# SLP: Finished : 0.3 [s]
+# SLP: 0 primitives and 42 (100.00%) other processes in SLP
+# SLP: 89 (98.89%) signals in SLP and 1 (1.11%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4762 kB (elbread=427 elab2=4199 kernel=135 sdf=0)
+# KERNEL: ASDB file was created in location C:\My_Designs\FPGA-Flappy-Bird\FlappyMarceli\FlappyMarceli\src\wave.asdb
+#  05:08, wtorek, 16 czerwca 2026
+#  Simulation has been initialized
+run
+endsim
+# KERNEL: stopped at time: 11171971800 ps
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+alog -O2 -sve -msg 5 -sv2k17 -work FlappyMarceli $dsn/src/tb.v
+# Unit top modules: tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.2 [s]
+# SLP: Finished : 0.3 [s]
+# SLP: 0 primitives and 42 (100.00%) other processes in SLP
+# SLP: 89 (98.89%) signals in SLP and 1 (1.11%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4762 kB (elbread=427 elab2=4199 kernel=135 sdf=0)
+# KERNEL: ASDB file was created in location C:\My_Designs\FPGA-Flappy-Bird\FlappyMarceli\FlappyMarceli\src\wave.asdb
+#  05:08, wtorek, 16 czerwca 2026
+#  Simulation has been initialized
+run
+endsim
+# KERNEL: stopped at time: 21412716600 ps
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+alog -O2 -sve -msg 5 -sv2k17 -work FlappyMarceli $dsn/src/tb.v
+# Unit top modules: tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.2 [s]
+# SLP: Finished : 0.3 [s]
+# SLP: 0 primitives and 42 (100.00%) other processes in SLP
+# SLP: 89 (98.89%) signals in SLP and 1 (1.11%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4762 kB (elbread=427 elab2=4199 kernel=135 sdf=0)
+# KERNEL: ASDB file was created in location C:\My_Designs\FPGA-Flappy-Bird\FlappyMarceli\FlappyMarceli\src\wave.asdb
+#  05:11, wtorek, 16 czerwca 2026
+#  Simulation has been initialized
+run
+endsim
+# KERNEL: stopped at time: 36026159400 ps
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+alog -O2 -sve -msg 5 -sv2k17 -work FlappyMarceli $dsn/src/tb.v
+# Unit top modules: tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.2 [s]
+# SLP: Finished : 0.3 [s]
+# SLP: 0 primitives and 42 (100.00%) other processes in SLP
+# SLP: 89 (98.89%) signals in SLP and 1 (1.11%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4762 kB (elbread=427 elab2=4199 kernel=135 sdf=0)
+# KERNEL: ASDB file was created in location C:\My_Designs\FPGA-Flappy-Bird\FlappyMarceli\FlappyMarceli\src\wave.asdb
+#  05:14, wtorek, 16 czerwca 2026
+#  Simulation has been initialized
+run
+endsim
+# KERNEL: stopped at time: 18346607400 ps
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+alog -O2 -sve -msg 5 -sv2k17 -work FlappyMarceli $dsn/src/tb.v
+# Unit top modules: tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.2 [s]
+# SLP: Finished : 0.3 [s]
+# SLP: 0 primitives and 42 (100.00%) other processes in SLP
+# SLP: 89 (98.89%) signals in SLP and 1 (1.11%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4762 kB (elbread=427 elab2=4199 kernel=135 sdf=0)
+# KERNEL: ASDB file was created in location C:\My_Designs\FPGA-Flappy-Bird\FlappyMarceli\FlappyMarceli\src\wave.asdb
+#  05:15, wtorek, 16 czerwca 2026
+#  Simulation has been initialized
+run
+endsim
+# KERNEL: stopped at time: 15873455400 ps
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+alog -O2 -sve -msg 5 -sv2k17 -work FlappyMarceli $dsn/src/tb.v
+# Unit top modules: tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.2 [s]
+# SLP: Finished : 0.3 [s]
+# SLP: 0 primitives and 42 (100.00%) other processes in SLP
+# SLP: 89 (98.89%) signals in SLP and 1 (1.11%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4762 kB (elbread=427 elab2=4199 kernel=135 sdf=0)
+# KERNEL: ASDB file was created in location C:\My_Designs\FPGA-Flappy-Bird\FlappyMarceli\FlappyMarceli\src\wave.asdb
+#  05:16, wtorek, 16 czerwca 2026
+#  Simulation has been initialized
+run
+endsim
+# KERNEL: stopped at time: 12392206200 ps
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+alog -O2 -sve -msg 5 -sv2k17 -work FlappyMarceli $dsn/src/pong_main.v $dsn/src/tb.v
+# Unit top modules: tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 The "pong_main" design unit does not have a time unit/precision defined but other design units do.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 100ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.2 [s]
+# SLP: Finished : 0.2 [s]
+# SLP: 0 primitives and 34 (100.00%) other processes in SLP
+# SLP: 76 (98.70%) signals in SLP and 1 (1.30%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4744 kB (elbread=427 elab2=4182 kernel=135 sdf=0)
+# KERNEL: ASDB file was created in location C:\My_Designs\FPGA-Flappy-Bird\FlappyMarceli\FlappyMarceli\src\wave.asdb
+#  05:17, wtorek, 16 czerwca 2026
+#  Simulation has been initialized
+run
+endsim
+# KERNEL: stopped at time: 12045402600 ps
+# VSIM: Simulation has finished.
+asim -O5 +access +r +m+tb tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 The "pong_main" design unit does not have a time unit/precision defined but other design units do.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 100ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Finished. Using existing simulator library
+# SLP: 0 primitives and 34 (100.00%) other processes in SLP
+# SLP: 76 (98.70%) signals in SLP and 1 (1.30%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4744 kB (elbread=427 elab2=4182 kernel=135 sdf=0)
+# KERNEL: ASDB file was created in location C:\My_Designs\FPGA-Flappy-Bird\FlappyMarceli\FlappyMarceli\src\wave.asdb
+#  05:18, wtorek, 16 czerwca 2026
+#  Simulation has been initialized
+run
+endsim
+# KERNEL: stopped at time: 5257777800 ps
+# VSIM: Simulation has finished.
