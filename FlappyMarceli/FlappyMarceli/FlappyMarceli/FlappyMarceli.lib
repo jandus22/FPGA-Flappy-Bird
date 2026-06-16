@@ -1,28 +1,28 @@
-timestamp=1781635908667
+timestamp=1781636569085
 
 [~A]
 C:/My_Designs/FPGA-Flappy-Bird/FlappyMarceli/FlappyMarceli/src/ddr.v_delay.v_dev_i2c_phy.v_dev_i2c_phy_bit.v_dev_i2c_phy_scaler.v_hdmi_i2c_cfg.v_pll_75mhz.v_pong_main.v_pong_top.v_tb.v_uart_rx.v_uart_tx.v_vga_sync_gen.v_vo_phy_ddr.v=0*930318*947184
-C:/My_Designs/FPGA-Flappy-Bird/FlappyMarceli/FlappyMarceli/src/pong_main.v=0*1023176*1028107
+C:/My_Designs/FPGA-Flappy-Bird/FlappyMarceli/FlappyMarceli/src/pong_main.v=0*1035582*1040577
 C:/My_Designs/FPGA-Flappy-Bird/FlappyMarceli/FlappyMarceli/src/pong_main.v_tb.v=0*966308*971980
 C:/My_Designs/FPGA-Flappy-Bird/FlappyMarceli/FlappyMarceli/src/tb.v=0*1020083*1021967
 C:/My_Designs/FlappyMarceli/FlappyMarceli/src/ddr.v_delay.v_dev_i2c_phy.v_dev_i2c_phy_bit.v_dev_i2c_phy_scaler.v_hdmi_i2c_cfg.v_pll_75mhz.v_pong_main.v_pong_top.v_tb.v_uart_rx.v_uart_tx.v_vga_sync_gen.v_vo_phy_ddr.v=0*628811*644412
 C:/My_Designs/FlappyMarceli/FlappyMarceli/src/pong_main.v=0*620354*623636
 C:/My_Designs/FlappyMarceli/FlappyMarceli/src/tb.v=0*617580*619223
 LastVerilogToplevel=tb
-ModifyID=160
+ModifyID=162
 Version=74
 c:/My_Designs/FlappyMarceli/FlappyMarceli/src/ddr.v_delay.v_dev_i2c_phy.v_dev_i2c_phy_bit.v_dev_i2c_phy_scaler.v_hdmi_i2c_cfg.v_pll_75mhz.v_pong_main.v_pong_top.v_tb.v_uart_rx.v_uart_tx.v_vga_sync_gen.v_vo_phy_ddr.v=0*51083*66444
 
 [~MFT]
-0=6|0FlappyMarceli.mgf|1028107|745238
-1=4|1FlappyMarceli.mgf|2820108|2758383
-3=8|3FlappyMarceli.mgf|3162517|3091304
+0=6|0FlappyMarceli.mgf|1040577|756290
+1=4|1FlappyMarceli.mgf|2847686|2785961
+3=8|3FlappyMarceli.mgf|3216729|3145650
 
 [$root]
-A/$root=22|||1*2819718
-BinW64/$root=3*3145524
-SLP=3*3145639
-Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|c73a565f2ade592f8ac1c68f484c9216ff3e89acb8516e730d286e5c8846a51c
+A/$root=22|||1*2847296
+BinW64/$root=3*3199870
+SLP=3*3199985
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|c73a565f2ade592f8ac1c68f484c92164ea28df8a305641ab4559cae2899120e
 
 [ddr]
 A/ddr=22|../src/ddr.v|8|1*2620193
@@ -74,11 +74,11 @@ SLP=3*2830499
 Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|60fdd984f0a1cbafad20405dedf6ff5d8404838175f4da5b2e43fca023fd8b06590f4174a07ea83f405742a5d88182c3
 
 [pong_main]
-A/pong_main=22|../src/pong_main.v|1|1*2820108
-BinW64/pong_main=3*3145707
+A/pong_main=22|../src/pong_main.v|1|1*2847686
+BinW64/pong_main=3*3200053
 R=../src/pong_main.v|1
-SLP=3*3162517
-Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|a0a4003288634f5726a3a54d73c73bf1ae9215e4a9e21b919b5b4f6e3d86a4bf59251522cbc9fcc93ac220f8c6051496
+SLP=3*3216729
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|a0a4003288634f5726a3a54d73c73bf1ae9215e4a9e21b919b5b4f6e3d86a4bf544efbf01e1f7de12702a71d7f7d2d0b
 
 [pong_top]
 A/pong_top=22|../src/pong_top.v|1|1*2661791
@@ -123,7 +123,7 @@ SLP=3*2861677
 Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|91a0dcdc5e9ed3107aff41d0516d556c58cafea78c4940cce8f33ee06d97c0519d81e3332b804b2259f73d9c11dbc728
 
 [~U]
-$root=12|0*1022499|
+$root=12|0*1034905|
 ddr=12|0*925905|
 delay=12|0*926197|
 dev_i2c_phy=12|0*926416|
@@ -131,7 +131,7 @@ dev_i2c_phy_bit=12|0*927009|
 dev_i2c_phy_scaler=12|0*926760|
 hdmi_i2c_cfg=12|0*927312|
 pll_75mhz=12|0*927565|
-pong_main=12|0*1022793|
+pong_main=12|0*1035199|
 pong_top=12|0*928183||0x10
 tb=12|0*1019860||0x10
 uart_rx=12|0*929618||0x10

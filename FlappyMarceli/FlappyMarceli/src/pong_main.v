@@ -26,7 +26,7 @@ module pong_main
   localparam ST_MENU = 2'd0;
   localparam ST_PLAY = 2'd1;
   localparam ST_OVER = 2'd2;
-  localparam ST_DEMO = 2'd3; // NOWY STAN: DEMO
+  localparam ST_DEMO = 2'd3;
 
   reg [15:0] lfsr;
   wire lfsr_feedback = lfsr[15] ^ lfsr[13] ^ lfsr[12] ^ lfsr[10];
@@ -72,20 +72,27 @@ module pong_main
   wire start_trigger = (EncB_QB_dd == 1'b1 && EncB_QB_d == 1'b0);
 
   // ----------------------------------------------------
-  // LICZNIK NIEAKTYWNOŚCI (5 SEKUND DLA DEMO)
+  // LICZNIKI CZASU (5 SEKUND W MENU, 10 SEKUND W DEMO)
   // ----------------------------------------------------
-  reg [28:0] inactivity_timer;
-  wire demo_timeout = (inactivity_timer >= 29'd400_000); // 5s przy 75MHz
+  // POWIĘKSZONY LICZNIK DO 30 BITÓW ŻEBY ZMIEŚCIĆ 750 MILIONÓW TAKTÓW!
+  reg [29:0] state_timer;
+  wire demo_start_timeout = (state_timer >= 30'd400_000); // 5s przy 75MHz
+  wire demo_loop_timeout  = (state_timer >= 30'd300_000); // 10s przy 75MHz
 
   always @(posedge CLK or posedge RST) begin
       if (RST) begin
-          inactivity_timer <= 0;
+          state_timer <= 0;
       end else if (state == ST_MENU) begin
-          // Zresetuj licznik jeśli gracz cokolwiek kliknie/przekręci
-          if (start_trigger || enc_tick) inactivity_timer <= 0;
-          else if (!demo_timeout) inactivity_timer <= inactivity_timer + 1;
+          // Reset po kliknięciu gracza ALBO gdy wejdzie w DEMO (5 sekund)
+          if (start_trigger || enc_tick || demo_start_timeout) state_timer <= 0;
+          else state_timer <= state_timer + 1;
+      end else if (state == ST_DEMO) begin
+          // Reset po wejściu gracza do gry ALBO pętla po 10 sekundach / zderzeniu
+          if (start_trigger || enc_tick || crash || demo_loop_timeout) state_timer <= 0;
+          else state_timer <= state_timer + 1;
       end else begin
-          inactivity_timer <= 0;
+          // W PLAY i OVER licznik po prostu stoi wyzerowany
+          state_timer <= 0;
       end
   end
 
@@ -97,7 +104,7 @@ module pong_main
   reg [10:0] pipe_gap_y [0:2]; 
   reg [3:0] score_thousands, score_hundreds, score_tens, score_ones;
 
-  // AI DEMA: Szukanie najbliższej rury przed ptakiem
+  // AI DEMA
   wire [10:0] dist0 = (pipe_x[0] + PIPE_W > BIRD_X) ? (pipe_x[0] + PIPE_W - BIRD_X) : 11'd1000;
   wire [10:0] dist1 = (pipe_x[1] + PIPE_W > BIRD_X) ? (pipe_x[1] + PIPE_W - BIRD_X) : 11'd1000;
   wire [10:0] dist2 = (pipe_x[2] + PIPE_W > BIRD_X) ? (pipe_x[2] + PIPE_W - BIRD_X) : 11'd1000;
@@ -108,7 +115,6 @@ module pong_main
   wire [10:0] active_gap = p0_closest ? pipe_gap_y[0] :
                            p1_closest ? pipe_gap_y[1] : pipe_gap_y[2];
 
-  // Skok Dema: jeśli ptak zbliży się na 1 piksel do dolnej krawędzi prześwitu
   wire auto_jump = (bird_y + BIRD_H >= active_gap + GAP_H - 1);
 
   // Kolizje
@@ -144,8 +150,8 @@ module pong_main
         score_thousands <= 0; score_hundreds <= 0;
         score_tens <= 0; score_ones <= 0;
         level <= 0;
-      end else if (state == ST_MENU && demo_timeout) begin
-        state <= ST_DEMO; // Odpalenie automatycznego DEMA po 5s
+      end else if (state == ST_MENU && demo_start_timeout) begin
+        state <= ST_DEMO; 
         bird_y <= SCR_H/2;
         pipe_x[0] <= SCR_W;      pipe_gap_y[0] <= 10;
         pipe_x[1] <= SCR_W + 25; pipe_gap_y[1] <= 15;
@@ -156,7 +162,7 @@ module pong_main
       end
     end
     else if (state == ST_PLAY || state == ST_DEMO) begin
-      // PRZERWANIE DEMA: Dowolna akcja gracza zaczyna normalną grę
+      // 1. PRZERWANIE DEMA PRZEZ GRACZA
       if (state == ST_DEMO && (start_trigger || enc_tick)) begin
         state <= ST_PLAY;
         bird_y <= SCR_H/2;
@@ -167,20 +173,29 @@ module pong_main
         score_tens <= 0; score_ones <= 0;
         level <= 0;
       end
-      else if (crash) begin
-        // W razie porażki w DEMO wracamy dyskretnie do Menu
-        state <= (state == ST_DEMO) ? ST_MENU : ST_OVER;
+      // 2. NIESKOŃCZONA PĘTLA DEMA (Restart po zderzeniu albo po 10 sekundach)
+      else if (state == ST_DEMO && (crash || demo_loop_timeout)) begin
+        state <= ST_DEMO;
+        bird_y <= SCR_H/2;
+        pipe_x[0] <= SCR_W;      pipe_gap_y[0] <= 10;
+        pipe_x[1] <= SCR_W + 25; pipe_gap_y[1] <= 15;
+        pipe_x[2] <= SCR_W + 50; pipe_gap_y[2] <= 8;
+        score_thousands <= 0; score_hundreds <= 0;
+        score_tens <= 0; score_ones <= 0;
+        level <= 0;
+      end
+      // 3. PRAWDZIWY GAME OVER W TRAKCIE GRY
+      else if (state == ST_PLAY && crash) begin
+        state <= ST_OVER;
       end 
       else begin
-        // Ręczny skok gracza (tylko w PLAY)
         if (jump && bird_y > 3 && state == ST_PLAY) begin
             bird_y <= bird_y - 6; 
         end
 
         if(game_tick) begin
-          // AI SKOK (tylko w DEMO)
           if (state == ST_DEMO && auto_jump && bird_y > 3) begin
-              bird_y <= bird_y - 6;
+              bird_y <= bird_y - 6; // AI skacze
           end else if (bird_y < SCR_H - BIRD_H) begin
               bird_y <= bird_y + 1; // Grawitacja
           end
@@ -234,7 +249,7 @@ module pong_main
 
   wire in_title_y = (V_CNT >= 10 && V_CNT <= 14);
   wire in_start_y = (V_CNT >= 25 && V_CNT <= 29);
-  wire in_demo_y  = (V_CNT >= 34 && V_CNT <= 38); // Obszar dla napisu DEMO w rogu
+  wire in_demo_y  = (V_CNT >= 34 && V_CNT <= 38); 
 
   reg [4:0] menu_char;
   reg is_menu_text;
@@ -265,11 +280,11 @@ module pong_main
               else if (H_CNT >= 34 && H_CNT <= 36) {is_menu_text, menu_char} = {1'b1, 5'd18}; 
               else if (H_CNT >= 38 && H_CNT <= 40) {is_menu_text, menu_char} = {1'b1, 5'd20}; 
           end
-          else if (in_demo_y && state == ST_DEMO && blink_state) begin // Migające "DEMO"
+          else if (in_demo_y && state == ST_DEMO && blink_state) begin 
               if (H_CNT >= 2 && H_CNT <= 4)        {is_menu_text, menu_char} = {1'b1, 5'd22}; // D
               else if (H_CNT >= 6 && H_CNT <= 8)   {is_menu_text, menu_char} = {1'b1, 5'd12}; // E
               else if (H_CNT >= 10 && H_CNT <= 12) {is_menu_text, menu_char} = {1'b1, 5'd16}; // M
-              else if (H_CNT >= 14 && H_CNT <= 16) {is_menu_text, menu_char} = {1'b1, 5'd0};  // O (0 z romu wygląda jak O)
+              else if (H_CNT >= 14 && H_CNT <= 16) {is_menu_text, menu_char} = {1'b1, 5'd0};  // O 
           end
       end
   end
@@ -318,7 +333,7 @@ module pong_main
       5'd19: digit_rom = 15'b011_100_010_001_110; 
       5'd20: digit_rom = 15'b111_010_010_010_010; 
       5'd21: digit_rom = 15'b101_101_010_010_010; 
-      5'd22: digit_rom = 15'b110_101_101_101_110; // Litera D
+      5'd22: digit_rom = 15'b110_101_101_101_110; 
       default: digit_rom = 15'b000_000_000_000_000;
     endcase
   end
@@ -354,9 +369,8 @@ module pong_main
       RED = 8'hFF; GREEN = 8'hFF; BLUE = 8'hFF;
     end
 
-    // 3 i 4. RURY I PTAK (Rysowane zawsze poza głównym menu)
+    // 3 i 4. RURY I PTAK
     if (state != ST_MENU) begin
-        // Rury
         for(i=0; i<3; i=i+1) begin
           if(H_CNT >= pipe_x[i] && H_CNT < pipe_x[i] + PIPE_W) begin
             if (V_CNT < pipe_gap_y[i] || V_CNT > pipe_gap_y[i] + GAP_H) begin
@@ -365,12 +379,11 @@ module pong_main
           end
         end
 
-        // Ptak
         if(H_CNT >= BIRD_X && H_CNT < BIRD_X + BIRD_W && V_CNT >= bird_y && V_CNT < bird_y + BIRD_H) begin
           if (state == ST_OVER) begin
-            RED = 8'hFF; GREEN = 8'h00; BLUE = 8'h00; // Zgnieciony, czerwony ptaszek
+            RED = 8'hFF; GREEN = 8'h00; BLUE = 8'h00; 
           end else begin
-            RED = 8'hFF; GREEN = 8'hFF; BLUE = 8'h00; // Lecący żółty ptaszek
+            RED = 8'hFF; GREEN = 8'hFF; BLUE = 8'h00; 
           end
         end
     end
@@ -379,16 +392,16 @@ module pong_main
     if (draw_text_pixel) begin
         if (state == ST_MENU) begin
             if (in_title_y) begin
-                RED = 8'hFF; GREEN = 8'hFF; BLUE = 8'h00; // Żółte 'FlappyMarceli'
+                RED = 8'hFF; GREEN = 8'hFF; BLUE = 8'h00; 
             end else begin
-                RED = 8'hFF; GREEN = 8'hFF; BLUE = 8'hFF; // Biały 'START'
+                RED = 8'hFF; GREEN = 8'hFF; BLUE = 8'hFF; 
             end
         end 
         else if (state == ST_DEMO && is_menu_text) begin
-            RED = 8'hFF; GREEN = 8'h00; BLUE = 8'h00; // Czerwony napis 'DEMO' żeby zwracał uwagę
+            RED = 8'hFF; GREEN = 8'h00; BLUE = 8'h00; 
         end 
         else if (show_score && is_text_area) begin
-            RED = 8'hFF; GREEN = 8'hFF; BLUE = 8'hFF; // Białe punkty i level (zarówno w DEMO jak i PLAY)
+            RED = 8'hFF; GREEN = 8'hFF; BLUE = 8'hFF; 
         end
     end
   end
