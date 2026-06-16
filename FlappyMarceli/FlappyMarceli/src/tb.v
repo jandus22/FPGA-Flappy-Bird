@@ -57,10 +57,10 @@ module tb();
 initial begin
     // Stan początkowy - enkoder w spoczynku (zazwyczaj obie fazy są w jedynce)
     EncA_QA = 1; EncA_QB = 1; EncB_QA = 1; EncB_QB = 1;
-
+    #1000000 EncB_QB = 0;
     // Dajemy ptakowi chwilę na opadnięcie po starcie symulacji
     forever begin
-      #300000 EncA_QA = 1;
+      #310000
       #100000 EncA_QA = 0; EncA_QB = 0; // <-- W tym momencie następuje JUMP!
       #20000 EncA_QA = 1;
       #100000 EncA_QA = 0;

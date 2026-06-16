@@ -1,139 +1,140 @@
-timestamp=1781577788740
+timestamp=1781580544775
 
 [~A]
-C:/My_Designs/FPGA-Flappy-Bird/FlappyMarceli/FlappyMarceli/src/ddr.v_delay.v_dev_i2c_phy.v_dev_i2c_phy_bit.v_dev_i2c_phy_scaler.v_hdmi_i2c_cfg.v_pll_75mhz.v_pong_main.v_pong_top.v_tb.v_uart_rx.v_uart_tx.v_vga_sync_gen.v_vo_phy_ddr.v=0*743745*759395
-C:/My_Designs/FPGA-Flappy-Bird/FlappyMarceli/FlappyMarceli/src/pong_main.v=0*687916*690991
-C:/My_Designs/FPGA-Flappy-Bird/FlappyMarceli/FlappyMarceli/src/tb.v=0*889703*891539
+C:/My_Designs/FPGA-Flappy-Bird/FlappyMarceli/FlappyMarceli/src/ddr.v_delay.v_dev_i2c_phy.v_dev_i2c_phy_bit.v_dev_i2c_phy_scaler.v_hdmi_i2c_cfg.v_pll_75mhz.v_pong_main.v_pong_top.v_tb.v_uart_rx.v_uart_tx.v_vga_sync_gen.v_vo_phy_ddr.v=0*930318*947184
+C:/My_Designs/FPGA-Flappy-Bird/FlappyMarceli/FlappyMarceli/src/pong_main.v=0*917976*922139
+C:/My_Designs/FPGA-Flappy-Bird/FlappyMarceli/FlappyMarceli/src/pong_main.v_tb.v=0*966308*971980
+C:/My_Designs/FPGA-Flappy-Bird/FlappyMarceli/FlappyMarceli/src/tb.v=0*996185*998021
 C:/My_Designs/FlappyMarceli/FlappyMarceli/src/ddr.v_delay.v_dev_i2c_phy.v_dev_i2c_phy_bit.v_dev_i2c_phy_scaler.v_hdmi_i2c_cfg.v_pll_75mhz.v_pong_main.v_pong_top.v_tb.v_uart_rx.v_uart_tx.v_vga_sync_gen.v_vo_phy_ddr.v=0*628811*644412
 C:/My_Designs/FlappyMarceli/FlappyMarceli/src/pong_main.v=0*620354*623636
 C:/My_Designs/FlappyMarceli/FlappyMarceli/src/tb.v=0*617580*619223
 LastVerilogToplevel=tb
-ModifyID=132
+ModifyID=153
 Version=74
 c:/My_Designs/FlappyMarceli/FlappyMarceli/src/ddr.v_delay.v_dev_i2c_phy.v_dev_i2c_phy_bit.v_dev_i2c_phy_scaler.v_hdmi_i2c_cfg.v_pll_75mhz.v_pong_main.v_pong_top.v_tb.v_uart_rx.v_uart_tx.v_vga_sync_gen.v_vo_phy_ddr.v=0*51083*66444
 
 [~MFT]
-0=6|0FlappyMarceli.mgf|891539|641864
-1=4|1FlappyMarceli.mgf|2522207|2455073
-3=8|3FlappyMarceli.mgf|2690697|2624984
+0=6|0FlappyMarceli.mgf|998021|720044
+1=4|1FlappyMarceli.mgf|2770771|2701373
+3=8|3FlappyMarceli.mgf|3049645|2978596
 
 [$root]
-A/$root=22|||1*2521817
-BinW64/$root=3*2685554
-SLP=3*2685669
-Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|c73a565f2ade592f8ac1c68f484c9216a6e0e24ef560dd36108ecf7d0c94d69e
+A/$root=22|||1*2770381
+BinW64/$root=3*3044461
+SLP=3*3044576
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|c73a565f2ade592f8ac1c68f484c92162a39266f88e43e7c0cfa435f849fee44
 
 [ddr]
-A/ddr=22|../src/ddr.v|8|1*2250060
-BinW64/ddr=3*2237467
+A/ddr=22|../src/ddr.v|8|1*2620193
+BinW64/ddr=3*2809123
 R=../src/ddr.v|8
-SLP=3*2237914
-Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|03264f2f5e55a9a5a4ea098f2334900447cbc1c96dbb701f452cf0a92c2377a9
+SLP=3*2809570
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|03264f2f5e55a9a5a4ea098f23349004517048bd5a02629760bc726ea856e984
 
 [delay]
-A/delay=22|../src/delay.v|1|1*2252540
-BinW64/delay=3*2238170
+A/delay=22|../src/delay.v|1|1*2622673
+BinW64/delay=3*2809826
 R=../src/delay.v|1
-SLP=3*2240192
-Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|f5a6c04acf499dc0ea18f307c3269eaf66dd7cab64cd848f355bfa43023c29e2
+SLP=3*2811848
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|f5a6c04acf499dc0ea18f307c3269eaf7d4c7c1c30c7d533359ba06027a68781
 
 [dev_i2c_phy]
-A/dev_i2c_phy=22|../src/dev_i2c_phy.v|16|1*2255326
-BinW64/dev_i2c_phy=3*2240635
+A/dev_i2c_phy=22|../src/dev_i2c_phy.v|16|1*2625459
+BinW64/dev_i2c_phy=3*2812291
 R=../src/dev_i2c_phy.v|16
-SLP=3*2244545
-Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|64571c99017e40256860b4006874d7efdff09ac6551def9523e685d5c2ceaab81148705c1f69a3598d5a50b3f4213512
+SLP=3*2816201
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|64571c99017e40256860b4006874d7efdff09ac6551def9523e685d5c2ceaab838cea7b66dbbe41e350b1358363e1e80
 
 [dev_i2c_phy_bit]
-A/dev_i2c_phy_bit=22|../src/dev_i2c_phy_bit.v|9|1*2264295
-BinW64/dev_i2c_phy_bit=3*2249551
+A/dev_i2c_phy_bit=22|../src/dev_i2c_phy_bit.v|9|1*2634428
+BinW64/dev_i2c_phy_bit=3*2821207
 R=../src/dev_i2c_phy_bit.v|9
-SLP=3*2252772
-Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|94250b773ee2fd339c5492c35d77f328c995787789af73ab33ea20d94268dfd68466b9e7674fb46df2f2454005e5ce24
+SLP=3*2824428
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|94250b773ee2fd339c5492c35d77f328c995787789af73ab33ea20d94268dfd67edff68ae58024f809938f60fdedbb90
 
 [dev_i2c_phy_scaler]
-A/dev_i2c_phy_scaler=22|../src/dev_i2c_phy_scaler.v|9|1*2262722
-BinW64/dev_i2c_phy_scaler=3*2248408
+A/dev_i2c_phy_scaler=22|../src/dev_i2c_phy_scaler.v|9|1*2632855
+BinW64/dev_i2c_phy_scaler=3*2820064
 R=../src/dev_i2c_phy_scaler.v|9
-SLP=3*2249166
-Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|43638be5364308fb621f385fff25167690522c4920ef0490c4c47eb99d0aef3c093e8f754e188720343f767106df1c70
+SLP=3*2820822
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|43638be5364308fb621f385fff25167690522c4920ef0490c4c47eb99d0aef3cfb9da0fb54dddfa6dd9b38916edfc5f7
 
 [hdmi_i2c_cfg]
-A/hdmi_i2c_cfg=22|../src/hdmi_i2c_cfg.v|1|1*2270514
-BinW64/hdmi_i2c_cfg=3*2255912
+A/hdmi_i2c_cfg=22|../src/hdmi_i2c_cfg.v|1|1*2640647
+BinW64/hdmi_i2c_cfg=3*2827568
 R=../src/hdmi_i2c_cfg.v|1
-SLP=3*2257253
-Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|48f66c98b4f7a526f368f7639b05eb4930186e63699880dbb45137d42aaafb6d664335126524606dc6c8b9b7cc83d236
+SLP=3*2828909
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|48f66c98b4f7a526f368f7639b05eb4930186e63699880dbb45137d42aaafb6d12a3a98b5b15b1747e12d0837f1e9d3a
 
 [pll_75mhz]
-A/pll_75mhz=22|../src/pll_75mhz.v|8|1*2273786
-BinW64/pll_75mhz=3*2258482
+A/pll_75mhz=22|../src/pll_75mhz.v|8|1*2643919
+BinW64/pll_75mhz=3*2830138
 R=../src/pll_75mhz.v|8
-SLP=3*2258843
-Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|60fdd984f0a1cbafad20405dedf6ff5d8404838175f4da5b2e43fca023fd8b06025972e273aa95295810e5c9a7a693b5
+SLP=3*2830499
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|60fdd984f0a1cbafad20405dedf6ff5d8404838175f4da5b2e43fca023fd8b06590f4174a07ea83f405742a5d88182c3
 
 [pong_main]
-A/pong_main=22|../src/pong_main.v|1|1*2279956
-BinW64/pong_main=3*2259035
+A/pong_main=22|../src/pong_main.v|1|1*2719812
+BinW64/pong_main=3*2940063
 R=../src/pong_main.v|1
-SLP=3*2268709
-Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|a0a4003288634f5726a3a54d73c73bf1ae9215e4a9e21b919b5b4f6e3d86a4bf6652be6a40e83b296053a9abd09554ed
+SLP=3*2952782
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|a0a4003288634f5726a3a54d73c73bf1ae9215e4a9e21b919b5b4f6e3d86a4bf8ef12fdc3f73d024b00421cbb4583505
 
 [pong_top]
-A/pong_top=22|../src/pong_top.v|1|1*2289346
-BinW64/pong_top=3*2274597
+A/pong_top=22|../src/pong_top.v|1|1*2661791
+BinW64/pong_top=3*2851519
 R=../src/pong_top.v|1
-SLP=3*2274936
-Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|680c7b4443639098c350b479c305129044262b98d1ce650fcb326b0e6e607b733bffd38841728522b7821a0362414e01
+SLP=3*2851858
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|680c7b4443639098c350b479c305129044262b98d1ce650fcb326b0e6e607b73593e6d4c71e2dc6a42243d3435d6f950
 
 [tb]
-A/tb=22|../src/tb.v|4|1*2522207
-BinW64/tb=3*2685737
+A/tb=22|../src/tb.v|4|1*2770771
+BinW64/tb=3*3044644
 R=../src/tb.v|4
-SLP=3*2690697
-Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|8db8692708dc0985d408d2497dbc95fad0e20c655d5049a4613a3f12dcf6e565
+SLP=3*3049645
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|8db8692708dc0985d408d2497dbc95fac851f84a1e2b3a574b1639123294cde0
 
 [uart_rx]
-A/uart_rx=22|../src/uart_rx.v|21|1*2312072
-BinW64/uart_rx=3*2292362
+A/uart_rx=22|../src/uart_rx.v|21|1*2684517
+BinW64/uart_rx=3*2871099
 R=../src/uart_rx.v|21
-SLP=3*2296927
-Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|d4533c9946a59a81de243b4bafd133f826527262ddaa47cb266f3a3c4d9b973a88ab2735213b95cbff1e28f6ac9acaa0
+SLP=3*2875660
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|d4533c9946a59a81de243b4bafd133f826527262ddaa47cb266f3a3c4d9b973a3e0660d0b2cf2198dca27b97556c9ace
 
 [uart_tx]
-A/uart_tx=22|../src/uart_tx.v|1|1*2316567
-BinW64/uart_tx=3*2298693
+A/uart_tx=22|../src/uart_tx.v|1|1*2689012
+BinW64/uart_tx=3*2877426
 R=../src/uart_tx.v|1
-SLP=3*2303583
-Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|48d6a522eb64880a1c272ab04e64821526527262ddaa47cb266f3a3c4d9b973afc2e616fdba82858b9c7eeff4991f4d0
+SLP=3*2882314
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|48d6a522eb64880a1c272ab04e64821526527262ddaa47cb266f3a3c4d9b973ae4675304184d70937b23ce87f573424a
 
 [vga_sync_gen]
-A/vga_sync_gen=22|../src/vga_sync_gen.v|6|1*2295805
-BinW64/vga_sync_gen=3*2275167
+A/vga_sync_gen=22|../src/vga_sync_gen.v|6|1*2668250
+BinW64/vga_sync_gen=3*2852089
 R=../src/vga_sync_gen.v|6
-SLP=3*2280443
-Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|2baa510cc54b701b0cdf40278836545d8be7015cad8267328f89e316e9c3fc50b2877ffa00c768ac2dd3919700245967
+SLP=3*2857365
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|2baa510cc54b701b0cdf40278836545d8be7015cad8267328f89e316e9c3fc50f13b619765a0a1210f8089e856578867
 
 [vo_phy_ddr]
-A/vo_phy_ddr=22|../src/vo_phy_ddr.v|10|1*2303089
-BinW64/vo_phy_ddr=3*2283877
+A/vo_phy_ddr=22|../src/vo_phy_ddr.v|10|1*2675534
+BinW64/vo_phy_ddr=3*2860799
 R=../src/vo_phy_ddr.v|10
-SLP=3*2284755
-Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|91a0dcdc5e9ed3107aff41d0516d556c58cafea78c4940cce8f33ee06d97c051e8ad1dfa17da623c500e9953895d6336
+SLP=3*2861677
+Version=15.0.261.9132 (Windows64)|0000000b789cd3f53752d02d2e33ca3634070010af02ea|91a0dcdc5e9ed3107aff41d0516d556c58cafea78c4940cce8f33ee06d97c0519d81e3332b804b2259f73d9c11dbc728
 
 [~U]
-$root=12|0*889186|
-ddr=12|0*739370|
-delay=12|0*739662|
-dev_i2c_phy=12|0*739881|
-dev_i2c_phy_bit=12|0*740474|
-dev_i2c_phy_scaler=12|0*740225|
-hdmi_i2c_cfg=12|0*740777|
-pll_75mhz=12|0*741030|
-pong_main=12|0*741272|
-pong_top=12|0*741610||0x10
-tb=12|0*889480||0x10
-uart_rx=12|0*743045||0x10
-uart_tx=12|0*743392||0x10
-vga_sync_gen=12|0*742086|
-vo_phy_ddr=12|0*742501|
+$root=12|0*995668|
+ddr=12|0*925905|
+delay=12|0*926197|
+dev_i2c_phy=12|0*926416|
+dev_i2c_phy_bit=12|0*927009|
+dev_i2c_phy_scaler=12|0*926760|
+hdmi_i2c_cfg=12|0*927312|
+pll_75mhz=12|0*927565|
+pong_main=12|0*965709|
+pong_top=12|0*928183||0x10
+tb=12|0*995962||0x10
+uart_rx=12|0*929618||0x10
+uart_tx=12|0*929965||0x10
+vga_sync_gen=12|0*928659|
+vo_phy_ddr=12|0*929074|
