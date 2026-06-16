@@ -59,56 +59,58 @@ initial begin
     EncA_QA = 1; EncA_QB = 1; EncB_QA = 1; EncB_QB = 1;
 
     // Dajemy ptakowi chwilę na opadnięcie po starcie symulacji
-    #300000;
-    #100000 EncA_QA = 0; EncA_QB = 0; // <-- W tym momencie następuje JUMP!
-    #20000 EncA_QA = 1;
-    #100000 EncA_QA = 0;
-    #20000 EncA_QA = 1;
-    #100000 EncA_QA = 0;
-    #20000 EncA_QA = 1;
-    #100000 EncA_QA = 0;
-    #20000 EncA_QA = 1;
-    #100000 EncA_QA = 0;
-    #20000 EncA_QA = 1;
-    #100000 EncA_QA = 0;
-    #20000 EncA_QA = 1;
-    #100000 EncA_QA = 0;
-    #20000 EncA_QA = 1;
-    #200000 EncA_QA = 0;
-    #20000 EncA_QA = 1;
-    #500000 EncA_QA = 0;
-    #20000 EncA_QA = 1;
-    #100000 EncA_QA = 0;
-    #20000 EncA_QA = 1;
-    #100000 EncA_QA = 0;
-    #10000 EncA_QA = 1;
-    #200000 EncA_QA = 0;
-    #20000 EncA_QA = 1;
-    #200000 EncA_QA = 0;
-    #20000 EncA_QA = 1;
-    #100000 EncA_QA = 0;
-    #10000 EncA_QA = 1;
-    #100000 EncA_QA = 0;    
-    #10000 EncA_QA = 1;
-    #100000 EncA_QA = 0; 
-    #10000 EncA_QA = 1;
-    #100000 EncA_QA = 0; 
-    #10000 EncA_QA = 1;
-    #700000 EncA_QA = 0;
-    #10000 EncA_QA = 1;
-    #10000 EncA_QA = 0;
-    #10000 EncA_QA = 1;
-    #100000 EncA_QA = 0;
-    #10000 EncA_QA = 1;
-    #600000 EncA_QA = 0;     
-    #10000 EncA_QA = 1;
-    #10000 EncA_QA = 0;
-    #10000 EncA_QA = 1;
-    #60000 EncA_QA = 0;
-    #10000 EncA_QA = 1;
-    #400000 EncA_QA = 0;
-    #10000 EncA_QA = 1;
-    #400000 EncA_QA = 0;      
+    forever begin
+      #300000;
+      #100000 EncA_QA = 0; EncA_QB = 0; // <-- W tym momencie następuje JUMP!
+      #20000 EncA_QA = 1;
+      #100000 EncA_QA = 0;
+      #20000 EncA_QA = 1;
+      #100000 EncA_QA = 0;
+      #20000 EncA_QA = 1;
+      #100000 EncA_QA = 0;
+      #20000 EncA_QA = 1;
+      #100000 EncA_QA = 0;
+      #20000 EncA_QA = 1;
+      #100000 EncA_QA = 0;
+      #20000 EncA_QA = 1;
+      #100000 EncA_QA = 0;
+      #20000 EncA_QA = 1;
+      #200000 EncA_QA = 0;
+      #20000 EncA_QA = 1;
+      #500000 EncA_QA = 0;
+      #20000 EncA_QA = 1;
+      #100000 EncA_QA = 0;
+      #20000 EncA_QA = 1;
+      #100000 EncA_QA = 0;
+      #10000 EncA_QA = 1;
+      #200000 EncA_QA = 0;
+      #20000 EncA_QA = 1;
+      #200000 EncA_QA = 0;
+      #20000 EncA_QA = 1;
+      #100000 EncA_QA = 0;
+      #10000 EncA_QA = 1;
+      #100000 EncA_QA = 0;    
+      #10000 EncA_QA = 1;
+      #100000 EncA_QA = 0; 
+      #10000 EncA_QA = 1;
+      #100000 EncA_QA = 0; 
+      #10000 EncA_QA = 1;
+      #700000 EncA_QA = 0;
+      #10000 EncA_QA = 1;
+      #10000 EncA_QA = 0;
+      #10000 EncA_QA = 1;
+      #100000 EncA_QA = 0;
+      #10000 EncA_QA = 1;
+      #600000 EncA_QA = 0;     
+      #10000 EncA_QA = 1;
+      #10000 EncA_QA = 0;
+      #10000 EncA_QA = 1;
+      #60000 EncA_QA = 0;
+      #10000 EncA_QA = 1;
+      #400000 EncA_QA = 0;
+      #100 EncA_QA = 1;
+    end
+    //#400000 EncA_QA = 0;      
     //forever begin
       // SYMULACJA POJEDYNCZEGO SKOKU
       // Nasz kod łapie skok, gdy QA zmienia się 1 -> 0, a QB to 0

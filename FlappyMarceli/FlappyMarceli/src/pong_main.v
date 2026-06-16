@@ -211,32 +211,46 @@ module pong_main
   wire blink_state = heartbeat[16]; 
   wire show_score = (!game_over) || blink_state;
 
+  // CHMURY
+  wire is_cloud1 = (H_CNT >= 12 && H_CNT <= 22 && V_CNT >= 6 && V_CNT <= 9) ||
+                   (H_CNT >= 15 && H_CNT <= 19 && V_CNT >= 4 && V_CNT <= 6);
+                   
+  wire is_cloud2 = (H_CNT >= 42 && H_CNT <= 52 && V_CNT >= 14 && V_CNT <= 17) ||
+                   (H_CNT >= 45 && H_CNT <= 49 && V_CNT >= 12 && V_CNT <= 14);
+                   
+  wire is_cloud3 = (H_CNT >= 24 && H_CNT <= 34 && V_CNT >= 22 && V_CNT <= 25) ||
+                   (H_CNT >= 27 && H_CNT <= 31 && V_CNT >= 20 && V_CNT <= 22);
+
+  wire is_cloud = is_cloud1 | is_cloud2 | is_cloud3;
+
   always @(*) begin
-    // DOMYŚLNE TŁO - Błękitne niebo
-    RED = 8'h60; GREEN = 8'hA0; BLUE = 8'hFF;
+    // 1. WARSTWA NAJNIŻSZA: Błękitne niebo (Czysty Cyjan)
+    RED = 8'h00; GREEN = 8'hFF; BLUE = 8'hFF;
     
-    // RYSOWANIE RUR
+    // 2. CHMURY (Czysty Biały)
+    if (is_cloud) begin
+      RED = 8'hFF; GREEN = 8'hFF; BLUE = 8'hFF;
+    end
+    
+    // 3. RURY (Czysty Zielony)
     for(i=0; i<3; i=i+1) begin
       if(H_CNT >= pipe_x[i] && H_CNT < pipe_x[i] + PIPE_W) begin
-        // Rysuj na zielono, o ile NIE jesteśmy w dziurze (prześwicie)
         if (V_CNT < pipe_gap_y[i] || V_CNT > pipe_gap_y[i] + GAP_H) begin
-          RED = 8'h00; GREEN = 8'hC0; BLUE = 8'h00; // Zielony kolor rury
+          RED = 8'h00; GREEN = 8'hFF; BLUE = 8'h00;
         end
       end
     end
 
-    // RYSOWANIE PTAKA
+    // 4. PTAK
     if(H_CNT >= BIRD_X && H_CNT < BIRD_X + BIRD_W && V_CNT >= bird_y && V_CNT < bird_y + BIRD_H) begin
       if (crash) begin
-        // Jeśli ptak ginie, rysuj na czerwono
-        RED = 8'hFF; GREEN = 8'h00; BLUE = 8'h00; 
+        RED = 8'hFF; GREEN = 8'h00; BLUE = 8'h00; // Czerwony
       end else begin
-        // Żółty ptaszek, z lekkim pomarańczowym odcieniem
-        RED = 8'hFF; GREEN = 8'hE0; BLUE = 8'h00;
+        RED = 8'hFF; GREEN = 8'hFF; BLUE = 8'h00; // Czysty Żółty
       end
     end
 
-    // RYSOWANIE UI (Wynik i Poziom) na biało
+    // 5. UI (Punkty i Poziom)
     if (draw_text_pixel && show_score) begin
         RED = 8'hFF; GREEN = 8'hFF; BLUE = 8'hFF;
     end
