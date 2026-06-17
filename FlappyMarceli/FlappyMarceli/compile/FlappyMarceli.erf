@@ -1,0 +1,5 @@
+WARNING VCP2515 "Undefined module: OB was used. Port connection rules will not be checked at such instantiations." "C:/My_Designs/FPGA-Flappy-Bird/FlappyMarceli/FlappyMarceli/src/ddr.v" 25 49
+WARNING VCP2515 "Undefined module: ODDRXE was used. Port connection rules will not be checked at such instantiations." "C:/My_Designs/FPGA-Flappy-Bird/FlappyMarceli/FlappyMarceli/src/ddr.v" 28 25
+WARNING VCP2515 "Undefined module: VLO was used. Port connection rules will not be checked at such instantiations." "C:/My_Designs/FPGA-Flappy-Bird/FlappyMarceli/FlappyMarceli/src/ddr.v" 30 40
+WARNING VCP2515 "Undefined module: VHI was used. Port connection rules will not be checked at such instantiations." "C:/My_Designs/FPGA-Flappy-Bird/FlappyMarceli/FlappyMarceli/src/ddr.v" 32 40
+WARNING VCP2515 "Undefined module: EHXPLLJ was used. Port connection rules will not be checked at such instantiations." "C:/My_Designs/FPGA-Flappy-Bird/FlappyMarceli/FlappyMarceli/src/pll_75mhz.v" 87 47
